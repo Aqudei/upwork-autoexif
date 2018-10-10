@@ -1,0 +1,26 @@
+﻿<mah:MetroWindow
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="AutoExif.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoExif"
+        mc:Ignorable="d"
+        Title="email: fdeu.aalmine@gmail.com" Height="400" Width="597" ResizeMode="NoResize" ToolTip="">
+    <mah:MetroWindow.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </mah:MetroWindow.Resources>
+    <Grid>
+        <ProgressBar HorizontalAlignment="Left" Height="8" VerticalAlignment="Top" Width="594" IsIndeterminate="True" Visibility="{Binding IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}" />
+        <Label Content="Excel Input:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,127,0,0"/>
+        <TextBox x:Name="ExcelInputFile" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="31,158,29,185" AutomationProperties.Name="ExcelInputFile"/>
+        <Button x:Name="BrowseForExcelInputFile" Content="Browse For Excel Excel Input File" HorizontalAlignment="Left" Margin="31,190,0,0" VerticalAlignment="Top" Width="222" AutomationProperties.Name="BrowseForExcelInputFile"/>
+        <Label Content="ExifTool Path (ExifTool is bundled with GeoSetter):" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,19,0,0"/>
+        <TextBox x:Name="ExifToolPath" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="31,51,29,294" AutomationProperties.Name="ExifToolPath"/>
+        <Button x:Name="BrowseForExifToolLocation" Content="Browse For ExifTool Location" HorizontalAlignment="Left" Margin="31,82,0,0" VerticalAlignment="Top" Width="184" AutomationProperties.Name="BrowseForExifToolLocation"/>
+        <Button x:Name="StartProcessing" Content="Start Processing" HorizontalAlignment="Left" Margin="383,296,0,0" VerticalAlignment="Top" Width="182" AutomationProperties.Name="BrowseForImagesFolder" Height="47" FontSize="16"/>
+        <Button x:Name="OpenSettings" Content="Settings" HorizontalAlignment="Left" Margin="272,296,0,0" VerticalAlignment="Top" Width="97" AutomationProperties.Name="BrowseForImagesFolder" Height="47" FontSize="12" Visibility="Collapsed"/>
+        <Button x:Name="OpenExcelFile" Content="Edit Excel File" HorizontalAlignment="Left" Margin="453,190,0,0" VerticalAlignment="Top" Width="109" AutomationProperties.Name="BrowseForExcelInputFile"/>
+
+    </Grid>
+</mah:MetroWindow>
